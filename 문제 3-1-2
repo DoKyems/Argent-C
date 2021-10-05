@@ -1,0 +1,19 @@
+//프로그램 사용자로부터 세 개의 정수 num1, num2, num3을 순서대로 입력 받은 후에,
+//다음 연산의 결과를 출력하는 프로그램을 작성해보자.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int num1, num2, num3, result;//정수형으로 정의
+
+	printf("세 개의 정수를 입력하시오: ");
+	scanf("%d %d %d", &num1, &num2, &num3);//정수 입력받기
+
+	result = num1 * num2 + num3;//계산 결과를 저장하는 result값의 계산식 입력
+
+	printf("%d*%d+%d=%d\n", num1, num2, num3, result);//결과 사용자에게 출력
+
+	return 0;
+}
