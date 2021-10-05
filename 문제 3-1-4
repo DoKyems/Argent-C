@@ -1,0 +1,19 @@
+//입력받은 두 정수를 나누었을 때 얻게 되는 몫과 나머지를 출력하는 프로그램을 작성하라.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int num1, num2, quotient, remainder;//정수형 정의
+
+	printf("두 정수를 입력하세요: ");
+	scanf("%d %d", &num1, &num2);//정수 입력받기
+
+	quotient = num1 / num2;//몫 구하는 계산식
+	remainder = num1 % num2;//나머지 구하는 계산식
+
+	printf("몫은 %d이고, 나머지는 %d입니다.", quotient, remainder);//몫과 나머지 출력
+
+	return 0;
+}
