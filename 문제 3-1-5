@@ -1,0 +1,19 @@
+//입력받은 세 개의 정수 num1, num2, num3를 대상으로
+//(num1-num2)*(num2+num3)*(num3%num1)의 결과를 출력하는 프로그램을 작성하라.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int num1, num2, num3, result;//정수형 정의
+
+	printf("세 개의 정수를 입력하시오: ");
+	scanf("%d %d %d", &num1, &num2, &num3);//세 개의 정수 입력받기
+
+	result = (num1 - num2) * (num2 + num3) * (num3 % num1);//result 계산식
+
+	printf("연산의 결과값은 %d입니다.", result);//결과값 출력
+
+	return 0;
+}
