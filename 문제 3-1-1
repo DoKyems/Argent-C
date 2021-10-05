@@ -6,15 +6,16 @@
 
 int main(void)
 {
-	int num1, num2, minus, plus;
+	int num1, num2, minus, plus;//정수형으로 정의
+	
 	printf("두 개의 정수를 입력하시오: ");
-	scanf("%d %d", &num1, &num2);
+	scanf("%d %d", &num1, &num2);//두 개의 정수 입력받기
 
-	plus = num1 + num2;
-	minus = num1 - num2;
+	plus = num1 + num2;//덧셈식
+	minus = num1 - num2;//뺄셈식
 
 	printf("두 수의 합은 %d입니다.\n", plus);
-	printf("두 수의 차는 %d입니다.\n", minus);
+	printf("두 수의 차는 %d입니다.\n", minus);//사용자에게 출력
 
 	return 0;
 }
