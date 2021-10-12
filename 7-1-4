@@ -1,0 +1,21 @@
+//프로그램 사용자로부터 입력 받은 숫자에 해당하는 구구단을 출력하되,
+//역순으로 출력하는 프로그램을 작성해보자.
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int num, i=9;
+
+	printf("정수를 입력하시오: ");
+	scanf("%d", &num);
+
+	while (i > 0)
+	{
+		printf("%d*%d=%d\n", num, i, num * i);
+
+		i--;
+	}
+
+	return 0;
+}
