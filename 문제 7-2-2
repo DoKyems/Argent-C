@@ -1,0 +1,31 @@
+//아래의 출력을 보이는 프로그램을 작성하라.
+//*
+//o *
+//o o *
+//o o o *
+//o o o o *
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int i = 0, j = 0;//정수형 정의
+
+	while (i < 5)//5번 반복함
+	{
+		j = 0;//j를 0으로 초기화
+
+		while (j < i)//i의 실행횟수보다 1만큼 덜 출력
+		{
+			printf("o ");
+			j++;//j값 증가
+		}
+
+		printf("*\n");
+		i++;//i값 증가
+	}
+
+
+	return 0;
+}
