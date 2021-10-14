@@ -1,0 +1,22 @@
+//사용자로부터 두 개의 정수를 입력 받아서, 
+//두 정수를 포함하여 그 사이에 존재하는 정수들의 합을 계산해서 출력하는 프로그램을 작성하라.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int num1, num2, total=0;//정수형 선언, total값 0으로 초기화
+
+	printf("두 정수를 입력하시오: ");
+	scanf("%d %d", &num1, &num2);//두 정수 입력받기
+
+	for (num1; num1 <= num2; num1++)//시작=num1, 종료=num1이 1씩 증가하여 num2값이 될때
+	{
+		total += num1;//실행할때마다 total에 num1값 추가
+	}
+
+	printf("정수들의 합은 %d입니다.\n", total);//total값 출력
+
+	return 0;
+}
