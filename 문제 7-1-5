@@ -7,22 +7,22 @@
 
 int main(void)
 {
-	int count, i=0, num, total=0;
+	int count, i=0, num, total=0;//정수형 정의. i=0 초기화, num값 합산하여 저장할 total도 0으로 초기화
 
 	printf("몇 개의 정수를 입력하시겠습니까?: ");
-	scanf("%d", &count);
+	scanf("%d", &count);//개수 입력받기
 
-	while (i < count)
+	while (i < count)//count값까지 반복실행
 	{
 		printf("정수를 입력하시오: ");
-		scanf("%d", &num);
+		scanf("%d", &num);//정수 입력받기
 
-		total += num;
+		total += num;//total에 num값 합산
 
-		i++;
+		i++;//i값 증가
 	}
 
-	printf("평균 값은 %f입니다.", (double)total / count);
+	printf("평균 값은 %f입니다.", (double)total / count);//count값 출력
 
 	return 0;
 }
