@@ -1,0 +1,31 @@
+//프로그램 사용자로부터 총 5개의 정수를 입력 받아서, 그 수의 합을 출력하는 프로그램을 작성해보자.
+//만약 1 미만의 수가 입력되는 경우, 재 입력을 요구하라.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int num, i=0, total=0;//입력받을 num, 반복문 횟수 결정하는 i, 합 저장할 total 정수형으로 정의
+
+	while (i < 5)//5번 반복
+	{
+		printf("정수를 입력하시오: ");
+		scanf("%d", &num);//정수 입력받기
+
+		if (num < 1)//1미만 입력 받았을 경우
+		{
+			printf("다시 입력하시오.\n");
+		}
+
+		else//1이상 입력 받았을 경우
+		{
+			total += num;//total값에 num값 추가
+			i++;//카운트
+		}
+	}
+
+	printf("정수들의 합은 %d입니다.\n", total);//total값 출력
+
+	return 0;
+}
