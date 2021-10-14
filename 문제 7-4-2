@@ -1,0 +1,21 @@
+//!(factorial)을 계산하는 프로그램을 작성하라.
+
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)
+{
+	int num, i, fac=1;//정수형 정의, fac는 1로 초기화
+	
+	printf("정수를 입력하시오: ");
+	scanf("%d", &num);//정수 입력받기
+
+	for (i = 1; i <= num; i++)//factorial 계산이므로 i는 1에서 시작~num이하까지 반복
+	{
+		fac *= i;//fac값에 1씩 증가하는 i값을 계속 곱해줌
+	}
+
+	printf("%d!=%d입니다.\n", num, fac);//fac값 출력
+
+	return 0;
+}
