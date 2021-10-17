@@ -1,0 +1,51 @@
+//섭씨 온도를 입력하면 화씨 온도를 반환하는 CelToFah라는 이름의 함수와
+//화씨 온도를 입력하면 섭씨 온도를 반환하는 FahToCel라는 이름의 함수를 정의하고 두 함수를 호출하는 예제를 완성해보자.
+//Fah(화씨)=1.8*Cel(섭씨)+32
+
+#include <stdio.h>
+float CelToFah(float Cel);
+float FahToCel(float Fah);//함수도 정의해주어야 함
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void)//메인함수
+{
+	float Cel, Fah;//
+	int CelOrFah;//정수형 정의(사용자가 입력하는 값이 화씨인지, 섭씨인지 판별)
+
+    printf("섭씨를 입력하려면 1, 화씨를 입력하려면 2를 입력하시오: ");
+	scanf("%d", &CelOrFah);//판별하는 값 입력받기
+
+	if (CelOrFah == 1)//if, 섭씨를 입력하겠다면...
+	{
+		printf("섭씨 온도를 입력하시오: ");
+		scanf("%f", &Cel);//섭씨 온도 입력받기
+
+		printf("섭씨-> 화씨 온도는 %f입니다.\n", CelToFah(Cel));//CelToFah함수 호출
+	}
+
+	else if (CelOrFah == 2)//if, 화씨를 입력하겠다면...
+	{
+		printf("화씨 온도를 입력하시오: ");
+		scanf("%f", &Fah);//화씨 온도 입력받기
+
+		printf("화씨-> 섭씨 온도는 %f입니다.\n", FahToCel(Fah));//FahToCel함수 호출
+	}
+
+
+	else
+	{
+		printf("섭씨 또는 화씨를 입력하시오.\n");
+	}
+
+	return 0;
+}
+
+float CelToFah(float Cel)
+{
+	return 1.8 * Cel + 32;//섭씨온도로 변환
+}
+
+float FahToCel(float Fah)
+{
+	return (Fah - 32) / 1.8;//화씨온도로 변환
+}
